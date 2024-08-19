@@ -4,29 +4,49 @@
       Generator</h1>
     <p id="text-shower" class="text-3xl font-semibold mt-8 text-center">Click
       the button below to generate random string!</p>
-    <div class="mt-14 flex justify-center gap-10">
-      <div class="length-specifier text-cyan-50 text-lg">
-        <label for="string-length">Length:</label>
-        <input
-          id="string-length"
-          type="text"
-          class="rounded-md h-9 outline-none p-1 text-black"
-        />
-      </div>
-      <div class="string-num-specifier text-cyan-50 text-lg">
-        <label for="string-numbers">Number of strings:</label>
-        <input
-          type="text"
-          id="string-numbers"
-          class="rounded-md h-9 outline-none p-1 text-black"
-        />
+    <div class="mt-14 flex justify-center gap-16">
+      <div class="flex flex-col gap-6">
+        <div class="length-specifier text-cyan-50 text-lg">
+          <label for="string-length" class="mr-20">Length:</label>
+          <input
+            id="string-length"
+            type="text"
+            class="rounded-md h-9 outline-none p-1 text-black text-sm"
+          />
+        </div>
+        <div class="string-num-specifier text-cyan-50 text-lg">
+          <label for="string-numbers" class="mr-6">No. of strings:</label>
+          <input
+            type="text"
+            id="string-numbers"
+            class="rounded-md h-9 outline-none p-1 text-black text-sm"
+          />
+        </div>
       </div>
       <div class="character-set-specifier text-cyan-50 text-lg">
-        UppperCase:<input type="checkbox" class="ml-5" />
+        <label for="uppercase"> Uppper Case:</label>
+        <input
+          type="checkbox"
+          class="ml-5 transform scale-150 check border-none outline-none"
+          id="uppercase"
+        />
         <br />
-        LowerCase:<input type="checkbox" class="ml-5" /><br />
-        Numbers:<input type="checkbox" class="ml-5" /><br />
-        Special Characters:<input type="checkbox" class="ml-5" />
+        <label for="lowercase"> Lower Case:</label><input
+          type="checkbox"
+          class="ml-5 transform scale-150 check"
+          id="lowercase"
+        /><br />
+        <label for="numbers"> Numbers:</label><input
+          type="checkbox"
+          class="ml-5 transform scale-150 check"
+          id="numbers"
+        /><br />
+        <label for="special-characters"> Special Characters:</label>
+        <input
+          type="checkbox"
+          class="ml-5 transform scale-150 check"
+          id="special-characters"
+        />
       </div>
     </div>
     <div class="text-center mt-12">

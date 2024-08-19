@@ -1,16 +1,41 @@
 document.addEventListener("DOMContentLoaded", () => {
   const generateBtn = document.getElementById("generate-btn");
   const resultShower = document.querySelector(".result-shower");
+  const stringLength = document.querySelector("#string-length");
+  const stringNumbers = document.querySelector("#string-numbers");
 
   generateBtn.addEventListener("click", () => {
-    getStringData();
+    const lengthOfString = stringLength.value;
+    const numberOFStrings = stringNumbers.value;
+    const checkedValues = [];
+    const checks = document.querySelectorAll('input[type="checkbox"]:checked');
+    checks.forEach((checkBox) => {
+      checkedValues.push(checkBox.id);
+    });
+
+    if (lengthOfString && numberOFStrings && checkedValues.length !== 0) {
+      // console.log(lengthOfString);
+      // console.log(numberOFStrings);
+      // console.log(checkedValues);
+      getStringData(lengthOfString, numberOFStrings, checkedValues);
+    } else {
+      alert("Please specify the given parameters!");
+    }
   });
 
-  async function getStringData() {
+  async function getStringData(lengthOfString, numberOFStrings, checkedValues) {
     try {
       // fetch data using API request
       const response = await fetch("/data", {
         method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          lengthOfString,
+          numberOFStrings,
+          checkedValues,
+        }),
       });
 
       if (!response.ok) {
