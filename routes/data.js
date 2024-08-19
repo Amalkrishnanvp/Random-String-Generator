@@ -4,10 +4,8 @@ const router = express.Router();
 /* POST data */
 router.post("/", (req, res, next) => {
   const { lengthOfString, numberOFStrings, checkedValues } = req.body;
-  // console.log("lengthOfString: " + lengthOfString);
-  // console.log("numberOFStrings: " + numberOFStrings);
-  // console.log("checkedValues: " + checkedValues);
 
+  // Generate random string
   function generateRandomString(str, length) {
     let result = "";
     const stringLength = str.length;
@@ -19,6 +17,7 @@ router.post("/", (req, res, next) => {
     return result;
   }
 
+  // Generate string based on user selected parameters
   if (
     checkedValues.includes("uppercase") &&
     checkedValues.includes("lowercase") &&
