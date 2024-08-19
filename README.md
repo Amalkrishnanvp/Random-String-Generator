@@ -58,7 +58,8 @@ This is a simple tool that generates random strings based on specified parameter
 ## Example
 
 ```bash
- Generated strings:
+Generated strings:
+
 1. A1z!Bx2Q
 2. mZ9$L2wX
 3. P7#bN4dR
