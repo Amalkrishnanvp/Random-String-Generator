@@ -60,16 +60,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // `;
     combinedHtml = "";
 
-    if (randomString.length === 1) {
-      const resultHtml = `<li>${randomString[0]}</li>`;
-      resultShower.innerHTML = resultHtml;
-    } else {
-      randomString.forEach((item) => {
-        const listContent = `<li>${item}</li>`;
+    randomString.forEach((item) => {
+      const listContent = `<li class="mt-3">${item}</li>`;
 
-        combinedHtml += listContent;
-      });
-    }
+      combinedHtml += listContent;
+    });
 
     resultShower.innerHTML = combinedHtml;
   }

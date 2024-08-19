@@ -99,6 +99,7 @@ router.post("/", (req, res, next) => {
     checkedValues.includes("lowercase")
   ) {
     const str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrsuvwxyz";
+    const length = lengthOfString;
     const finalResult = [];
 
     for (let i = 1; i <= numberOFStrings; i++) {
