@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a simple tool that generates random strings based on specified parameters. You can customize the string length, character set, and include options like uppercase letters, lowercase letters, numbers, and special characters.
+This is a simple tool that generates random strings based on specified parameters. You can customize the string length and character set by including options like uppercase letters, lowercase letters, numbers, and special characters.
 
 ## Features
 
