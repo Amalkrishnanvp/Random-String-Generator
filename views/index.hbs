@@ -1,9 +1,34 @@
-<div class="container px-8 pt-12">
+<div class="container px-8 pt-5">
   <div class="project">
     <h1 class="font-bold text-white text-4xl text-center">Random String
       Generator</h1>
-    <p id="text-shower" class="text-3xl font-semibold mt-10 text-center">Click
+    <p id="text-shower" class="text-3xl font-semibold mt-8 text-center">Click
       the button below to generate random string!</p>
+    <div class="mt-14 flex justify-center gap-10">
+      <div class="length-specifier text-cyan-50 text-lg">
+        <label for="string-length">Length:</label>
+        <input
+          id="string-length"
+          type="text"
+          class="rounded-md h-9 outline-none p-1 text-black"
+        />
+      </div>
+      <div class="string-num-specifier text-cyan-50 text-lg">
+        <label for="string-numbers">Number of strings:</label>
+        <input
+          type="text"
+          id="string-numbers"
+          class="rounded-md h-9 outline-none p-1 text-black"
+        />
+      </div>
+      <div class="character-set-specifier text-cyan-50 text-lg">
+        UppperCase:<input type="checkbox" class="ml-5" />
+        <br />
+        LowerCase:<input type="checkbox" class="ml-5" /><br />
+        Numbers:<input type="checkbox" class="ml-5" /><br />
+        Special Characters:<input type="checkbox" class="ml-5" />
+      </div>
+    </div>
     <div class="text-center mt-12">
       <button
         class="text-white rounded-md px-4 py-2 text-xl border border-white"
@@ -13,7 +38,8 @@
     <div>
       <div class="text-center mt-8 flex justify-center items-center flex-col">
         <div class="result-text font-bold text-4xl mb-4">Generated String:</div>
-          <span class="result-shower"></span>
+        <span class="result-shower"></span>
+      </div>
     </div>
   </div>
 </div>
