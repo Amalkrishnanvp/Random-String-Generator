@@ -1,10 +1,10 @@
-<div class="container px-8 pt-5">
+<div class="container px-8 pt-3">
   <div class="project">
     <h1 class="font-bold text-white text-4xl text-center">Random String
       Generator</h1>
-    <p id="text-shower" class="text-3xl font-semibold mt-8 text-center">Click
+    <p id="text-shower" class="text-3xl font-semibold mt-5 text-center">Click
       the button below to generate random string!</p>
-    <div class="mt-14 flex justify-center gap-16">
+    <div class="mt-14 flex justify-center gap-32">
       <div class="flex flex-col gap-6">
         <div class="length-specifier text-cyan-50 text-lg">
           <label for="string-length" class="mr-20">Length:</label>
@@ -23,30 +23,42 @@
           />
         </div>
       </div>
-      <div class="character-set-specifier text-cyan-50 text-lg">
-        <label for="uppercase"> Uppper Case:</label>
-        <input
-          type="checkbox"
-          class="ml-5 transform scale-150 check border-none outline-none"
-          id="uppercase"
-        />
-        <br />
-        <label for="lowercase"> Lower Case:</label><input
-          type="checkbox"
-          class="ml-5 transform scale-150 check"
-          id="lowercase"
-        /><br />
-        <label for="numbers"> Numbers:</label><input
-          type="checkbox"
-          class="ml-5 transform scale-150 check"
-          id="numbers"
-        /><br />
-        <label for="special-characters"> Special Characters:</label>
-        <input
-          type="checkbox"
-          class="ml-5 transform scale-150 check"
-          id="special-characters"
-        />
+      <div
+        class="character-set-specifier text-cyan-50 text-lg flex gap-16 items-center"
+      >
+
+        <div class="flex flex-col gap-6">
+          <div><label for="uppercase"> Upper Case:</label>
+            <input
+              type="checkbox"
+              class="ml-6 transform scale-150 check border-none outline-none"
+              id="uppercase"
+            /></div>
+
+          <div>
+            <label for="lowercase"> Lower Case:</label><input
+              type="checkbox"
+              class="ml-7 transform scale-150 check"
+              id="lowercase"
+            /></div>
+        </div>
+
+        <div class="flex flex-col gap-6">
+          <div>
+            <label for="numbers"> Numbers:</label><input
+              type="checkbox"
+              class="ml-28 transform scale-150 check"
+              id="numbers"
+            /></div>
+
+          <div><label for="special-characters"> Special Characters:</label>
+            <input
+              type="checkbox"
+              class="ml-8 transform scale-150 check"
+              id="special-characters"
+            />
+          </div>
+        </div>
       </div>
     </div>
     <div class="text-center mt-12">
@@ -58,7 +70,7 @@
     <div>
       <div class="text-center mt-8 flex justify-center items-center flex-col">
         <div class="result-text font-bold text-4xl mb-4">Generated String:</div>
-        <span class="result-shower"></span>
+        <ol class="result-shower text-white text-xl" type="1"></ol>
       </div>
     </div>
   </div>

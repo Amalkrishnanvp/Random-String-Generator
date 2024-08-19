@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const resultShower = document.querySelector(".result-shower");
   const stringLength = document.querySelector("#string-length");
   const stringNumbers = document.querySelector("#string-numbers");
+  let combinedHtml = "";
 
   generateBtn.addEventListener("click", () => {
     const lengthOfString = stringLength.value;
@@ -52,11 +53,24 @@ document.addEventListener("DOMContentLoaded", () => {
   // display string data
   function displayStringData(data) {
     const randomString = data.finalResult;
+    console.log(randomString);
 
-    const resultHtml = `
-    <div class="text-3xl font-semibold text-white">${randomString}</div>
-    `;
+    // const resultHtml = `
+    // <div class="text-3xl font-semibold text-white">${randomString}</div>
+    // `;
+    combinedHtml = "";
 
-    resultShower.innerHTML = resultHtml;
+    if (randomString.length === 1) {
+      const resultHtml = `<li>${randomString[0]}</li>`;
+      resultShower.innerHTML = resultHtml;
+    } else {
+      randomString.forEach((item) => {
+        const listContent = `<li>${item}</li>`;
+
+        combinedHtml += listContent;
+      });
+    }
+
+    resultShower.innerHTML = combinedHtml;
   }
 });
