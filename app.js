@@ -10,7 +10,7 @@ app.set("view engine", "hbs");
 app.use(express.static("public"));
 
 // Parse JSON bodies
-// app.use(express.json());
+app.use(express.json());
 
 // Import routes
 const indexRouter = require("./routes/index");

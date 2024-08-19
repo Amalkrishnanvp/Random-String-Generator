@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const randomString = data.finalResult;
 
     const resultHtml = `
-    <p class="text-4xl font-bold">${randomString}</p>
+    <div class="text-3xl font-semibold text-white">${randomString}</div>
     `;
 
     resultShower.innerHTML = resultHtml;
