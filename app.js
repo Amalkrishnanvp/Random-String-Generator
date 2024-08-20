@@ -16,7 +16,7 @@ app.use(express.json());
 const indexRouter = require("./routes/index");
 const dataRouter = require("./routes/data");
 
-// User routes
+// Use routes
 app.use("/", indexRouter);
 app.use("/data", dataRouter);
 
